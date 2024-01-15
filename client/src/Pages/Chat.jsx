@@ -247,7 +247,7 @@ function Chat() {
   }, [selectedUser, id]);
 
   function connectToWs() {
-    const ws = new WebSocket(`https://talkflow-zy0f.onrender.com`);
+    const ws = new WebSocket(`ws://talkflow-zy0f.onrender.com`);
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
