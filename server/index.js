@@ -37,7 +37,7 @@ const server = app.listen(port, () => {
   console.log(`Server is listening to requests on port ${port}`);
 });
 
-const wss = new ws.WebSocketServer("https://talkflow-zy0f.onrender.com");
+const wss = new ws.WebSocketServer({server});
 
 wss.on("connection", (connection, req) => {
   function sendOnlinePeople() {
