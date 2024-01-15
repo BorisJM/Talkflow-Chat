@@ -19,6 +19,7 @@ const dispatch = useDispatch();
 const { innerWidth: width, innerHeight: height } = window;
 
 function informAboutTyping(typing, receiver) {
+  if(ws.readyState === 0) return
   ws?.send(JSON.stringify({sender: id,receiver,typing}))
 }
 
